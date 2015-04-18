@@ -5,7 +5,7 @@
              xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
              version="2.0">
 
-    <persistence-unit name="fjorumPU" transaction-type="RESOURCE_LOCAL">
+    <persistence-unit name="fjorum_PU_prod" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
         <properties>
@@ -25,6 +25,20 @@
             <property name="hibernate.c3p0.idle_test_period" value="300" />
             <property name="hibernate.c3p0.max_statements" value="0" />
             <property name="hibernate.c3p0.timeout" value="100" />   -->
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="fjorum_PU_dev">
+        <provider>com.objectdb.jpa.Provider</provider>
+        <!--<mapping-file>META-INF/mappingFile.xml</mapping-file>
+        <jar-file>packedEntity.jar</jar-file>
+        <class>sample.MyEntity1</class>
+        <class>sample.MyEntity2</class>-->
+        <properties>
+            <property name="javax.persistence.jdbc.url"
+                      value="db/fjorum.odb"/>
+            <property name="javax.persistence.jdbc.user" value="admin"/>
+            <property name="javax.persistence.jdbc.password" value="admin"/>
         </properties>
     </persistence-unit>
 </persistence>

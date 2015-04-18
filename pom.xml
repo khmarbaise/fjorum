@@ -15,6 +15,14 @@
         <jetty.version>9.2.3.v20140905</jetty.version>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>objectdb</id>
+            <name>ObjectDB Repository</name>
+            <url>http://m2.objectdb.com</url>
+        </repository>
+    </repositories>
+
     <build>
         <plugins>
             <plugin>
@@ -145,6 +153,11 @@
             <groupId>postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>9.1-901-1.jdbc4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.objectdb</groupId>
+            <artifactId>objectdb</artifactId>
+            <version>2.6.1_04</version>
         </dependency>
 
         <!-- If you want to deploy to a war please --><!-- comment ninja-standalone dependency and  --><!-- uncomment the dependency for ninja-servlet --><!--

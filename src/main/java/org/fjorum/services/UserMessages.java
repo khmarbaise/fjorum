@@ -45,5 +45,6 @@ public interface UserMessages {
     String USER_MAILER_SEND_EMAIL_WITH_PASSWORD_RESET_CODE_SUBJECT = "user.mailer.sendEmailWithPasswordResetCodeSubject";
     String USER_MAILER_SEND_EMAIL_WITH_PASSWORD_RESET_CODE_BODY_TEXT = "user.mailer.sendEmailWithPasswordResetCodeBodyText";
 
+    String USER_ADMIN_CREATED = "user.admin.created";
 
 }
